@@ -4,6 +4,7 @@ import Slider from './components/Slider';
 import Footer from './components/Footer';
 import ProductDisplay from './components/ProductDisplay';
 import InquirySection from './components/InquirySection';
+import PartnersSection from './components/PartnersSection';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <ProductDisplay orientation="left" id="03" />
       </section>
       <InquirySection />
+      <PartnersSection />
       <Footer />
     </div>
   );
