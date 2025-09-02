@@ -13,7 +13,7 @@ export default function ProductDisplay({ orientation = 'left', id = "01" }) {
             『Life Saving Towel O<sub>2</sub> Dream』 is a safety product and a daily necessity that is crucial in saving lives in case of fire by securing the golden time for safe evacuation through the prevention of suffocation due to smoke and toxic gas.
           </p>
 
-          <button className="flex items-center px-6 py-3 bg-white border border-gray-300 rounded-full shadow hover:bg-gray-100 transition text-gray-800 font-medium">
+          <button className="flex items-center px-6 py-3 bg-white border border-gray-300 rounded-full shadow hover:bg-gray-100 duration-300 transition text-gray-800 font-medium">
             VIEW MORE <span className="text-red-600 ml-2 text-xl">+</span>
           </button>
         </div>

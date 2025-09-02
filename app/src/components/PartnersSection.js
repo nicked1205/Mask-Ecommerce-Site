@@ -29,7 +29,7 @@ export default function PartnersSection() {
           {partners.map((logo, index) => (
             <div
               key={index}
-              className="flex items-center justify-center bg-white rounded-lg shadow-sm border p-4 hover:shadow-md transition"
+              className="flex items-center justify-center bg-white rounded-lg shadow-sm border p-4 hover:shadow-md transition duration-300"
             >
               <img
                 src="/images/product-main.png"

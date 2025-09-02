@@ -7,8 +7,8 @@ import { Pagination, Autoplay } from 'swiper/modules';
 
 export default function ProductSlider() {
   return (
-    <section class="py-10 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
+    <section className="py-10 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
             <Swiper
               spaceBetween={30}
               centeredSlides={true}
@@ -23,13 +23,13 @@ export default function ProductSlider() {
               className="mySwiper"
             >
               <SwiperSlide>
-                <img src="/images/slide1.jpg" alt="Slide 1" class="w-full h-96 object-cover rounded-xl shadow-md" />
+                <img src="/images/slide1.jpg" alt="Slide 1" className="w-full h-96 object-cover rounded-xl shadow-md" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="/images/slide1.jpg" alt="Slide 2" class="w-full h-96 object-cover rounded-xl shadow-md" />
+                <img src="/images/slide1.jpg" alt="Slide 2" className="w-full h-96 object-cover rounded-xl shadow-md" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="/images/slide1.jpg" alt="Slide 3" class="w-full h-96 object-cover rounded-xl shadow-md" />
+                <img src="/images/slide1.jpg" alt="Slide 3" className="w-full h-96 object-cover rounded-xl shadow-md" />
               </SwiperSlide>
             </Swiper>
         </div>
