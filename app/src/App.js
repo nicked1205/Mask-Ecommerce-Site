@@ -1,10 +1,11 @@
 import './styles/App.css';
 import Header from './components/Header';
-import Slider from './components/Slider';
+import Slider from './components/main/Slider';
 import Footer from './components/Footer';
-import ProductDisplay from './components/ProductDisplay';
-import InquirySection from './components/InquirySection';
-import PartnersSection from './components/PartnersSection';
+import ProductDisplay from './components/main/ProductDisplay';
+import InquirySection from './components/main/InquirySection';
+import PartnersSection from './components/main/PartnersSection';
+import VideoSlider from './components/main/VideosSection';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <ProductDisplay orientation="left" id="03" />
       </section>
       <InquirySection />
+      <VideoSlider />
       <PartnersSection />
       <Footer />
     </div>

@@ -15,3 +15,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.custom-pagination .custom-bullet {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background-color: #d1d5db; /* gray-300 */
+  display: inline-block;
+  opacity: 1;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: #7f1d1d; /* red-900 */
+}
