@@ -13,18 +13,30 @@ function Header() {
         "Recruitment",
         "Directions",
       ],
+      paths: [
+        "/company-overview",
+        "/ceo-message",
+        "/history",
+        "/management-philosophy",
+        "/patents-and-certifications",
+        "/recruitment",
+        "/directions",
+      ]
     },
     {
       title: "Products",
       items: ["Life Saving Towel", "Life Saving Mask", "Oxygen Generator"],
+      paths: ["/products/towel", "/products/mask", "/products/oxygen-generator"]
     },
     {
       title: "PR",
       items: ["Promotional Videos", "Photos", "Press Release", "Partners"],
+      paths: ["/pr/videos", "/pr/photos", "/pr/press-release", "/pr/partners"]
     },
     {
       title: "Community",
       items: ["Notice", "Inquiry", "Exchanges and Returns"],
+      paths: ["/community/notice", "/community/inquiry", "/community/exchanges-returns"]
     },
   ];
 
@@ -37,7 +49,7 @@ function Header() {
 
   return (
     <section>
-      <nav className="flex justify-between items-center px-4 py-3 bg-black text-white md:px-16">
+      <nav className="fixed flex justify-between items-center px-4 py-3 bg-black text-white md:px-16 z-20 w-full">
         <div className="logo">
           <h1 className="text-lg font-bold">MyApp</h1>
         </div>
@@ -53,14 +65,14 @@ function Header() {
               </button>
 
               <div
-                className={`z-10 absolute left-1/2 -translate-x-1/2 mt-2 overflow-hidden transition-all duration-300 ease-in-out 
+                className={`z-20 absolute left-1/2 -translate-x-1/2 mt-2 overflow-hidden transition-all duration-300 ease-in-out 
                 ${openDropdown === i ? "opacity-100 max-h-96 w-56" : "opacity-0 max-h-0 w-0"}`}
               >
                 <div className="bg-black text-white text-sm rounded-2xl py-4 space-y-2 text-center">
                   {menu.items.map((item, j) => (
                     <a
                       key={j}
-                      href="#"
+                      href={menu.paths[j]}
                       className="block hover:text-gray-300 transition"
                     >
                       {item}
@@ -132,7 +144,7 @@ function Header() {
                     {menu.items.map((item, j) => (
                       <li key={j}>
                         <a
-                          href="#"
+                          href={menu.paths[j]}
                           className="block hover:text-gray-300 transition"
                         >
                           {item}

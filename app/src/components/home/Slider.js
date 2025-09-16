@@ -8,7 +8,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 export default function ProductSlider() {
   return (
     <section className="py-10 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto mt-12">
             <Swiper
               spaceBetween={30}
               centeredSlides={true}

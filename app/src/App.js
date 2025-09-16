@@ -1,25 +1,28 @@
 import './styles/App.css';
 import Header from './components/Header';
-import Slider from './components/main/Slider';
 import Footer from './components/Footer';
-import ProductDisplay from './components/main/ProductDisplay';
-import InquirySection from './components/main/InquirySection';
-import PartnersSection from './components/main/PartnersSection';
-import VideoSlider from './components/main/VideosSection';
+import { Routes, Route } from "react-router-dom";
+import Home from './components/home';
+import CompanyOverview from './components/company/company-overview';
+import CEOGreeting from './components/company/ceo-message';
+import ManagementPhilosophy from './components/company/management-philosophy';
+import History from './components/company/history';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Slider value={50} onChange={(value) => console.log(value)} />
-      <section className="bg-white py-16">
-        <ProductDisplay orientation="left" id="01" />
-        <ProductDisplay orientation="right" id="02" />
-        <ProductDisplay orientation="left" id="03" />
-      </section>
-      <InquirySection />
-      <VideoSlider />
-      <PartnersSection />
+
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/company-overview" element={<CompanyOverview />} />
+          <Route path="/ceo-message" element={<CEOGreeting />} />
+          <Route path="/management-philosophy" element={<ManagementPhilosophy />} />
+          <Route path="/history" element={<History />} />
+        </Routes>
+      </main>
+
       <Footer />
     </div>
   );
