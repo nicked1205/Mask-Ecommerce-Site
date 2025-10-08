@@ -82,7 +82,6 @@ const History = () => {
         <div className="relative border-l-4 border-red-900 ml-20">
           {data.map((yearData, i) => (
             <div key={i} className="md:mb-16 mb-8 relative">
-              {/* Year */}
               <div className="absolute -left-24 -top-1.5 text-3xl font-bold text-gray-800">
                 {yearData.year}
               </div>

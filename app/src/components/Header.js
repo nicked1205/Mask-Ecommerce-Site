@@ -137,7 +137,7 @@ function Header() {
                 </button>
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
-                    openDropdown === i ? "max-h-40 mt-2" : "max-h-0"
+                    openDropdown === i ? "max-h-60 mt-2" : "max-h-0"
                   }`}
                 >
                   <ul className="pl-2 space-y-2 text-sm">
