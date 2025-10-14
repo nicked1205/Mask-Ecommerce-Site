@@ -10,6 +10,8 @@ import History from './components/company/history';
 import Recruitment from './components/company/recruitment';
 import Directions from './components/company/directions';
 import Videos from './components/pr/pv';
+import Photos from './components/pr/photos';
+import Partners from './components/pr/partners';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/recruitment" element={<Recruitment />} />
           <Route path="/directions" element={<Directions />} />
           <Route path="/pr/videos" element={<Videos />} />
+          <Route path="/pr/images" element={<Photos />} />
+          <Route path="/pr/partners" element={<Partners />} />
         </Routes>
       </main>
 

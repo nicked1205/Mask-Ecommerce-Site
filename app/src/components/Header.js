@@ -31,7 +31,7 @@ function Header() {
     {
       title: "PR",
       items: ["Promotional Videos", "Photos", "Press Release", "Partners"],
-      paths: ["/pr/videos", "/pr/photos", "/pr/press-release", "/pr/partners"]
+      paths: ["/pr/videos", "/pr/images", "/pr/press-release", "/pr/partners"]
     },
     {
       title: "Community",

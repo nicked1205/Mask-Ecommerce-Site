@@ -1,27 +1,24 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
-// 🔁 Replace with your real video URLs (use single-video embeds, not playlists)
 const videoData = [
   { id: 1, title: "Life-saving towel demonstration image", embedUrl: "https://www.youtube.com/embed/0tFvGqH1V3g" },
   { id: 2, title: "Life-saving mask demonstration image", embedUrl: "https://www.youtube.com/embed/fU7TzGJ9X6M" },
   { id: 3, title: "Empirical images of oxygen generators", embedUrl: "https://www.youtube.com/embed/I1fNDg6cP8I" },
-  // add more if you want to see multiple pages
 ];
 
 export default function Videos() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortKey, setSortKey] = useState("title");
   const [page, setPage] = useState(1);
-  const [perPage, setPerPage] = useState(3); // desktop default
+  const [perPage, setPerPage] = useState(3);
 
-  // 🧠 Responsive page size without any library
   useEffect(() => {
     const updatePerPage = () => {
       const w = window.innerWidth;
-      if (w < 640) setPerPage(1);        // sm: 1 per page
-      else if (w < 1024) setPerPage(2);  // md: 2 per page
-      else setPerPage(3);                // lg+: 3 per page
+      if (w < 640) setPerPage(1);
+      else if (w < 1024) setPerPage(2);
+      else setPerPage(3);
     };
     updatePerPage();
     window.addEventListener("resize", updatePerPage);
@@ -38,14 +35,12 @@ export default function Videos() {
   const start = (page - 1) * perPage;
   const current = filtered.slice(start, start + perPage);
 
-  // keep page in range if filters change
   useEffect(() => {
     if (page > totalPages) setPage(1);
   }, [totalPages, page]);
 
   return (
     <section className="px-6 md:px-20 py-12 bg-white text-gray-800">
-      {/* Top bar */}
       <div className="flex flex-col md:flex-row justify-between items-center my-24 gap-4">
         <p className="text-lg font-semibold">Total {filtered.length}</p>
 
@@ -71,7 +66,6 @@ export default function Videos() {
         </div>
       </div>
 
-      {/* Grid of videos */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {current.map(video => (
           <div key={video.id} className="flex flex-col items-center">
@@ -89,7 +83,6 @@ export default function Videos() {
         ))}
       </div>
 
-      {/* Numbered pagination (no arrows) */}
       <div className="flex justify-center mt-24">
         <nav className="flex items-center gap-2">
           {Array.from({ length: totalPages }, (_, i) => i + 1).map(n => {
