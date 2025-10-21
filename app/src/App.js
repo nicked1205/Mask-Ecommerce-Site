@@ -12,6 +12,7 @@ import Directions from './components/company/directions';
 import Videos from './components/pr/pv';
 import Photos from './components/pr/photos';
 import Partners from './components/pr/partners';
+import Inquiry from './components/community/inquiry';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/pr/videos" element={<Videos />} />
           <Route path="/pr/images" element={<Photos />} />
           <Route path="/pr/partners" element={<Partners />} />
+          <Route path="/community/inquiry" element={<Inquiry />} />
         </Routes>
       </main>
 
