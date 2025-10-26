@@ -25,8 +25,8 @@ function Header() {
     },
     {
       title: "Products",
-      items: ["Life Saving Towel", "Life Saving Mask", "Oxygen Generator"],
-      paths: ["/products/towel", "/products/mask", "/products/oxygen-generator"]
+      items: ["Life Saving Mask"],
+      paths: ["/products/mask"]
     },
     {
       title: "PR",
@@ -35,8 +35,8 @@ function Header() {
     },
     {
       title: "Community",
-      items: ["Notice", "Inquiry", "Exchanges and Returns"],
-      paths: ["/community/notice", "/community/inquiry", "/community/exchanges-returns"]
+      items: ["Notice", "Inquiry"],
+      paths: ["/community/notice", "/community/inquiry"]
     },
   ];
 

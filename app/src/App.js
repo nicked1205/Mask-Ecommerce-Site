@@ -13,6 +13,10 @@ import Videos from './components/pr/pv';
 import Photos from './components/pr/photos';
 import Partners from './components/pr/partners';
 import Inquiry from './components/community/inquiry';
+import ProductLifeSavingMask from './components/products/lifeSavingMask';
+import PressReleases from './components/pr/press';
+import Notice from './components/community/notice';
+import Certificates from './components/company/certificate';
 
 function App() {
   return (
@@ -28,10 +32,14 @@ function App() {
           <Route path="/history" element={<History />} />
           <Route path="/recruitment" element={<Recruitment />} />
           <Route path="/directions" element={<Directions />} />
+          <Route path="/patents-and-certifications" element={<Certificates />} />
           <Route path="/pr/videos" element={<Videos />} />
           <Route path="/pr/images" element={<Photos />} />
           <Route path="/pr/partners" element={<Partners />} />
+          <Route path="/pr/press-release" element={<PressReleases />} />
           <Route path="/community/inquiry" element={<Inquiry />} />
+          <Route path="/community/notice" element={<Notice />} />
+          <Route path="/products/mask" element={<ProductLifeSavingMask />} />
         </Routes>
       </main>
 
