@@ -1,12 +1,14 @@
+import inquiryImg from '../../assets/images/inquiry.png';
+
 export default function InquirySection() {
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat py-20 text-center"
       style={{
-        backgroundImage: "url('/images/background.jpg')"
+        backgroundImage: inquiryImg ? `url(${inquiryImg})` : 'none',
       }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="absolute inset-0 bg-opacity-40"></div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-white">
         <h2 className="text-3xl md:text-4xl font-extrabold mb-6 leading-snug">

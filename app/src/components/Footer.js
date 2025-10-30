@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Logo from "../assets/images/logo.png";
 
 export default function Footer() {
   const footerMenus = [
@@ -13,18 +14,30 @@ export default function Footer() {
         "Recruitment",
         "Directions",
       ],
+      paths: [
+        "/company-overview",
+        "/ceo-message",
+        "/history",
+        "/management-philosophy",
+        "/patents-and-certifications",
+        "/recruitment",
+        "/directions",
+      ]
     },
     {
       title: "Products",
-      items: ["Life Saving Towel", "Life Saving Mask", "Oxygen Generator"],
+      items: ["Life Saving Mask"],
+      paths: ["/products/mask"]
     },
     {
       title: "PR",
       items: ["Promotional Videos", "Photos", "Press Release", "Partners"],
+      paths: ["/pr/videos", "/pr/images", "/pr/press-release", "/pr/partners"]
     },
     {
       title: "Community",
-      items: ["Notice", "Inquiry", "Exchanges and Returns"],
+      items: ["Notice", "Inquiry"],
+      paths: ["/community/notice", "/community/inquiry"]
     },
   ];
 
@@ -35,18 +48,20 @@ export default function Footer() {
   };  
 
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-brand-footerBg text-brand-footerText">
       <div className="max-w-7xl mx-auto grid grid-cols-1 grid-rows-2 md:grid-cols-6 md:grid-rows-1 gap-8">
         
-        <div className="md:col-span-2 px-6 py-10 bg-gray-900 md:order-1 order-2 text-left">
-          <div className="flex items-center mb-4">
-            <img src="/logo.png" alt="Saving Story Logo" className="h-8 w-auto" />
+        <div className="md:col-span-2 px-6 py-10 bg-brand-footerBg brightness-150 md:order-1 order-2 text-left">
+          <div className="flex flex-row gap-4">
+            <div className="flex items-center mb-4">
+              <img src={Logo} alt="Saving Story Logo" className="h-20 w-auto" />
+            </div>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="text-brand-footerLink hover:text-brand-footerLinkHover duration-200">Terms of Service</a></li>
+              <li><a href="#" className="text-brand-footerLink hover:text-brand-footerLinkHover duration-200">Privacy Policy</a></li>
+              <li><a href="#" className="text-brand-footerLink hover:text-brand-footerLinkHover duration-200">Refusal of Unauthorized Email Collection</a></li>
+            </ul>
           </div>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">Terms of Service</a></li>
-            <li><a href="#" className="hover:underline">Privacy Policy</a></li>
-            <li><a href="#" className="hover:underline">Refusal of Unauthorized Email Collection</a></li>
-          </ul>
 
           <div className="mt-6 text-sm space-y-1">
             <p><strong>Saving Story Co., Ltd.</strong> CEO Jang Seung</p>
@@ -55,7 +70,7 @@ export default function Footer() {
             <p>E-mail: savingstory@hanmail.net</p>
           </div>
 
-          <p className="mt-6 text-xs text-gray-400">
+          <p className="mt-6 text-xs text-brand-footerText">
             Copyright © 2023 Saving Story. All Rights Reserved.
           </p>
         </div>
@@ -67,7 +82,7 @@ export default function Footer() {
               <ul className="space-y-2 text-sm">
                 {menu.items.map((item, j) => (
                   <li key={j}>
-                    <a href="#" className="hover:underline">
+                    <a href={menu.paths[j]} className="text-brand-footerLink hover:text-brand-footerLinkHover duration-200">
                       {item}
                     </a>
                   </li>
@@ -79,7 +94,7 @@ export default function Footer() {
             <div className="md:hidden" key={i}>
               <div className="border-b border-gray-700">
                 <button 
-                  className="w-full flex justify-between items-center py-2 font-semibold text-left hover:text-gray-300"
+                  className="w-full flex justify-between items-center py-2 font-semibold text-left text-brand-footerLink hover:text-brand-footerLinkHover duration-200"
                   onClick={() => toggleAccordion(i)}>
                   {menu.title}
                   <span
@@ -94,7 +109,7 @@ export default function Footer() {
                   <ul class="pl-4 py-2 space-y-3 text-left">
                     {menu.items.map((item, j) => (
                       <li key={j}>
-                        <a href="#" className="hover:underline">
+                        <a href={menu.paths[j]} className="hover:underline">
                           {item}
                         </a>
                       </li>

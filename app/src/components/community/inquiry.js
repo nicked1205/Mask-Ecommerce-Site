@@ -38,13 +38,13 @@ export default function Inquiry() {
   };
 
   return (
-    <section className="px-6 md:px-20 py-12 bg-white text-gray-800">
+    <section className="px-6 md:px-20 py-12 bg-primary text-text">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-center text-2xl md:text-3xl font-semibold mb-2">
           Saving Story is waiting to communicate with you.
         </h2>
-        <p className="text-right text-sm text-gray-500 mb-6">
-          Fields marked with <span className="text-red-500">*</span> are required fields.
+        <p className="text-right text-sm text-brand-textMuted marker:mb-6">
+          Fields marked with <span className="text-brand-alert">*</span> are required fields.
         </p>
 
         <hr className="mb-8" />
@@ -53,68 +53,68 @@ export default function Inquiry() {
           <div className="grid md:grid-cols-3 gap-4">
             <div>
               <label className="block font-medium mb-1">
-                Name <span className="text-red-500">*</span>
+                Name <span className="text-brand-alert">*</span>
               </label>
               <input
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                className="w-full border rounded-md px-3 py-2 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-700"
+                className="w-full border border-brand-border rounded-md px-3 py-2 bg-brand-surface focus:outline-none focus:ring-2 focus:ring-brand-borderFocus"
               />
             </div>
             <div>
               <label className="block font-medium mb-1">
-                Tel. <span className="text-red-500">*</span>
+                Tel. <span className="text-brand-alert">*</span>
               </label>
               <input
                 name="tel"
                 value={form.tel}
                 onChange={handleChange}
-                className="w-full border rounded-md px-3 py-2 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-700"
+                className="w-full border border-brand-border rounded-md px-3 py-2 bg-brand-surface focus:outline-none focus:ring-2 focus:ring-brand-borderFocus"
               />
             </div>
             <div>
               <label className="block font-medium mb-1">
-                E-mail <span className="text-red-500">*</span>
+                E-mail <span className="text-brand-alert">*</span>
               </label>
               <input
                 type="email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                className="w-full border rounded-md px-3 py-2 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-700"
+                className="w-full border border-brand-border rounded-md px-3 py-2 bg-brand-surface focus:outline-none focus:ring-2 focus:ring-brand-borderFocus"
               />
             </div>
           </div>
 
           <div>
             <label className="block font-medium mb-1">
-              Title <span className="text-red-500">*</span>
+              Title <span className="text-brand-alert">*</span>
             </label>
             <input
               name="title"
               value={form.title}
               onChange={handleChange}
-              className="w-full border rounded-md px-3 py-2 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-700"
+              className="w-full border border-brand-border rounded-md px-3 py-2 bg-brand-surface focus:outline-none focus:ring-2 focus:ring-brand-borderFocus"
             />
           </div>
 
           <div>
             <label className="block font-medium mb-1">
-              Inquiry <span className="text-red-500">*</span>
+              Inquiry <span className="text-brand-alert">*</span>
             </label>
             <textarea
               name="inquiry"
               value={form.inquiry}
               onChange={handleChange}
               rows="5"
-              className="w-full border rounded-md px-3 py-2 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-700"
+              className="w-full border border-brand-border rounded-md px-3 py-2 bg-brand-surface focus:outline-none focus:ring-2 focus:ring-brand-borderFocus"
             ></textarea>
           </div>
 
           <div>
             <label className="block font-medium mb-2">Privacy Policy</label>
-            <div className="border rounded-md bg-gray-50 p-3 text-sm text-gray-700 h-28 overflow-y-scroll">
+            <div className="border border-brand-border rounded-md bg-brand-lightBg p-3 text-sm text-brand-inputText h-28 overflow-y-scroll">
               The personal information provided through this inquiry is managed according to
               the Personal Information Protection Act, and the collected personal information
               such as name, email address, name of company, and details of inquiry is deleted
@@ -127,9 +127,9 @@ export default function Inquiry() {
                 name="agree"
                 checked={form.agree}
                 onChange={handleChange}
-                className="mr-2 accent-red-700"
+                className="mr-2 accent-brand-primaryAlpha"
               />
-              <label className="text-sm text-gray-700">
+              <label className="text-sm text-brand-textMuted">
                 I agree to the collection and use of personal information.
               </label>
             </div>
@@ -137,16 +137,16 @@ export default function Inquiry() {
 
           <div>
             <label className="block font-medium mb-1">
-              Security Code <span className="text-red-500">*</span>
+              Security Code <span className="text-brand-alert">*</span>
             </label>
             <div className="flex items-center gap-3">
-              <div className="px-4 py-2 border bg-gray-100 font-mono tracking-widest text-lg">
+              <div className="px-4 py-2 border border-brand-border bg-brand-surface font-mono tracking-widest text-lg">
                 {captcha}
               </div>
               <button
                 type="button"
                 onClick={() => setCaptcha(generateCaptcha())}
-                className="text-gray-600 hover:text-red-700 text-xl"
+                className="text-brand-primary hover:text-brand-primaryHover text-xl duration-300"
               >
                 ↻
               </button>
@@ -155,19 +155,19 @@ export default function Inquiry() {
                 value={form.code}
                 onChange={handleChange}
                 placeholder="Enter code"
-                className="border rounded-md px-3 py-2 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-700"
+                className="border border-brand-border rounded-md px-3 py-2 bg-brand-surface focus:outline-none focus:ring-2 focus:ring-brand-borderFocus"
               />
             </div>
           </div>
 
           {error && (
-            <p className="text-center text-red-600 font-medium">{error}</p>
+            <p className="text-center text-brand-alert font-medium">{error}</p>
           )}
 
           <div className="text-center pt-4">
             <button
               type="submit"
-              className="bg-red-800 text-white px-10 py-2 rounded-full hover:bg-red-700 transition"
+              className="bg-brand-primary text-white hover:bg-brand-primaryHover px-10 py-2 rounded-full transition duration-300"
             >
               Submit
             </button>
@@ -175,7 +175,7 @@ export default function Inquiry() {
         </form>
 
         {submitted && !error && (
-          <p className="text-center text-green-600 mt-6 font-medium">
+          <p className="text-center text-brand-success mt-6 font-medium">
             ✅ Your inquiry has been submitted successfully. We’ll get back to you soon.
           </p>
         )}
