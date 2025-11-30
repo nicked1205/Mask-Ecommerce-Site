@@ -1,3 +1,5 @@
+import Mask from '../../assets/mask/mask-1.jpg';
+
 export default function ProductDisplay({ orientation = 'left', id = "01" }) {
   return (
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6 md:px-12 md:aspect-[2/1] mt-20 md:mt-0">        
@@ -20,9 +22,9 @@ export default function ProductDisplay({ orientation = 'left', id = "01" }) {
 
         <div className={`md:w-1/2 mt-10 md:mt-0 flex justify-center relative ${orientation === 'right' ? 'md:order-1' : ''}`}>
           <img
-            src="/images/product-main.png"
+            src={Mask}
             alt="Life Saving Towel"
-            className="w-80 md:w-[400px] relative z-10"
+            className="w-[90%] relative z-10 md:ml-16 rounded-lg shadow-lg"
           />
           {/* <img
             src="/images/product-bg.png"

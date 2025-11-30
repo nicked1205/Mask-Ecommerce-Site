@@ -1,4 +1,4 @@
-import React from "react";
+import MaskPackage from '../../assets/mask/mask-package-front.jpg';
 
 const ProductLifeSavingMask = () => {
   return (
@@ -8,9 +8,11 @@ const ProductLifeSavingMask = () => {
         <h1 className="text-[38px] font-medium text-[#333]">Life Saving Mask</h1>
       </section>
 
-      <section className="flex flex-col lg:flex-row items-center justify-between mt-10 bg-[#f8f8f8] px-6 md:px-20 py-14 gap-10">
+      <section
+      style={{backgroundImage: 'url(/mask-background.jpg)'}}
+      className="flex flex-col lg:flex-row items-center justify-between mt-10 px-6 md:px-20 py-14 gap-10">
         {/* Text */}
-        <div className="lg:w-1/2 space-y-5 leading-relaxed text-[18px] text-[#444]">
+        <div className="lg:w-1/2 space-y-5 leading-relaxed text-[18px] text-[#444] bg-white/90 p-6 rounded-md shadow-md">
           <p>
             <span className="font-bold text-[22px] text-gray-900">
               O₂ Dream Life Saving Mask
@@ -36,9 +38,9 @@ const ProductLifeSavingMask = () => {
         </div>
 
         {/* Image */}
-        <div className="lg:w-1/2 flex justify-center">
+        <div className="lg:w-1/2 flex justify-center translate-y-24">
           <img
-            src="/images/products/life-saving-mask/hero-mask.jpg"
+            src={MaskPackage}
             alt="Life Saving Mask"
             className="max-w-[500px] w-full"
           />
@@ -78,11 +80,11 @@ const ProductLifeSavingMask = () => {
           </p>
           <div className="flex flex-col md:flex-row md:items-start gap-10">
             <img
-              src="/images/products/life-saving-mask/composition.jpg"
+              src="/images/mask-general-1.jpg"
               alt="Mask Composition"
               className="w-full md:w-[60%] rounded-md"
             />
-            <div className="flex flex-col space-y-4 text-[16px] text-gray-700">
+            <div className="flex flex-col space-y-4 text-[16px] text-gray-700 my-auto">
               <div className="flex items-start gap-4">
                 <div className="bg-[#eee] text-gray-900 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap w-[30%]">
                   Single Product

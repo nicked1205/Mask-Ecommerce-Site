@@ -1,36 +1,41 @@
+import HumanManagement from '../../assets/images/human-management.png';
+import RespectLife from '../../assets/images/respect-life.png';
+import CustomerValue from '../../assets/images/customer-value.png';
+import PursuitInnovation from '../../assets/images/pursuit-innovation.png';
+
 const ManagementPhilosophy = () => {
   const visions = [
     {
       title: "Human Management",
       bigtext: "Human",
       description: "We promote people-centered management.",
-      imageUrl: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d", // example teamwork image
+      imageUrl: HumanManagement, // example teamwork image
       orientation: "left"
     },
     {
       title: "Respect for Life",
       bigtext: "Life",
       description: "We are committed to protecting the safety of all.",
-      imageUrl: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+      imageUrl: RespectLife,
       orientation: "right"
     },
     {
       title: "Customer Value",
       bigtext: "Value",
       description: "Customers are our family.",
-      imageUrl: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+      imageUrl: CustomerValue,
       orientation: "left"
     },
     {
       title: "Pursuit for Innovation",
       bigtext: "Innovation",
       description: "We pursue creative innovation.",
-      imageUrl: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+      imageUrl: PursuitInnovation,
       orientation: "right"
     }
   ];
   return (
-    <div className="pt-20 pb-16 px-6 md:px-20 lg:px-40">
+    <div className="pt-20 pb-16 px-6 md:px-20 lg:px-40 md:w-4/5 mx-auto">
       <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">
         Corporate Vision
       </h1>
@@ -45,7 +50,7 @@ const ManagementPhilosophy = () => {
         <div className="flex flex-col md:flex-row items-center gap-10">
           <div className={`flex-1 ${vision.orientation === "right" ? "md:order-2" : "md:order-1"}`}>
             <img
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" // example teamwork image
+              src={vision.imageUrl} // example teamwork image
               alt="Human Management"
               className="rounded-lg shadow-lg w-full"
             />

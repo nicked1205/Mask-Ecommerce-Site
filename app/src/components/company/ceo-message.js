@@ -1,3 +1,5 @@
+import Logo from '../../assets/images/logo.png';
+
 function CEOGreeting() {
   return (
     <section className="px-6 pb-12 pt-24 max-w-5xl mx-auto">
@@ -9,8 +11,8 @@ function CEOGreeting() {
           alt="CEO"
           className="rounded-lg shadow-md aspect-video absolute -left-2"
         />
-        <div className="bg-gray-100 pl-[40%] content-around mb-6 min-h-[240px]">
-          <img src="/logo.png" alt="Saving Story Logo" className="h-12" />
+        <div className="bg-gray-100 pl-[40%] content-around mb-6 min-h-[240px] gap-4 flex flex-col justify-center items-start">
+          <img src={Logo} alt="Saving Story Logo" className="h-12" />
           <p className="mb-6 !important text-xl">
             Welcome.
             <br />
